@@ -1,0 +1,281 @@
+body{
+    max-width: 750px;
+    margin: 0 auto;
+}
+// 头部区域
+#header{
+    max-width: 730px;
+    padding: 7px 10px;
+    display: flex;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    .logo{
+        display: block;
+        width: 60px;
+        height: 26px;
+        background-image: url(../../images/sprites.png);
+        background-size: 200px 200px;
+        background-position: 0 -110px;
+        margin-top: 5px;
+    }
+    >form{
+       
+        flex: 1;
+        margin-left: 10px;
+        position: relative;
+        // width: 100%;
+        .search{
+            position: absolute;
+            left: 5px;
+            top: 3px;
+            width: 20px;
+            height: 20px;
+            background-image: url(../../images/sprites.png);
+            background-size: 200px 200px;
+            background-position: -60px -110px;
+        }
+        >input{
+            padding-left: 30px;
+            width: 100%;
+            height: 30px;
+            border-radius: 15px;
+            border: none;
+        }
+    }
+    .login{
+       width: 60px;
+       text-align: center;
+       line-height: 30px;
+       color:#fff;
+       text-decoration: none;
+      
+       
+    }
+
+}
+
+
+// 轮播图区域
+#slide{
+    img{
+        width: 100%;
+    }
+    //修改小圆点样式
+    .swiper-container{
+        .swiper-pagination-bullet{
+            border: 1px solid #fff;
+            opacity: 1;
+            background-color: transparent;
+        }
+        .swiper-pagination-bullet-active{
+            background-color: #fff;
+        }
+    }
+}
+
+// 导航条区域
+
+#nav{
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 10px;
+        margin: 0;
+        li{
+            width: 25%;
+            a{
+                display: block;
+                text-align: center;
+                text-decoration: none;
+                color: #666666;
+                img{
+                    width: 40px;
+                    height: 40px;
+                }
+                p{
+                    font-size: 14px;
+                    line-height: 30px;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+// 主体商品商品区域
+
+#main{
+    background-color: #f5f5f5;
+    padding: 10px;
+    .seckill{
+        background-color: #fff;
+        .title{
+            display: flex;
+            position: relative;
+            line-height: 30px;
+            .naozhong{
+                width: 20px;
+                height: 20px;
+                margin-left: 5px;
+                margin-top: 2px;
+            }
+            .name{
+                margin-left: 10px;
+                font-size: 14px;
+                color: red;
+            }
+            .down-time{
+                margin-left: 10px;
+                span{
+                    background-color: #000;
+                    color: #fff;
+                    display: inline-block;
+                    width: 15px;
+                    height: 15px;
+                    /* 注意父元素设置了行高30px会继承 高度不需要30px只需要15px修改当前span行高为15px */
+                    line-height: 15px;
+                    text-align: center;
+                    &:nth-child(3n) {
+                        background-color: #fff;
+                        color: #000;
+                    }
+                }
+            }
+            .more{
+                position: absolute;
+                right: 10px;
+                font-size: 14px;
+            }
+        }
+        .content{
+            ul{
+                list-style: none;
+               display: flex;
+               padding: 0;
+                margin: 0;
+                li{
+                    text-align: center;
+                    flex: 1;
+                    padding: 0;
+                    margin: 0;
+                    &+li{
+                        border-left: 1px solid #666666;
+                    }
+                    a{
+                        display: block;
+                        text-decoration: none;
+                        color:red;
+                        img{
+                            width: 110px;
+                        }
+                        p{
+                            padding: 0;
+                            margin: 0;
+                            font-size: 12px;
+                           margin-bottom: 0;
+                            &:last-child{
+                                color: #666666;
+                            }
+    
+                        }
+                    }
+                }
+            }
+        }
+    
+
+    }
+    .jd-market{
+        background-color: #fff;
+		
+		margin-top: 10px;
+        .title{
+            background-color: #fff;
+            border-bottom: 1px solid darkgrey;
+            padding: 5px;
+            h4{
+                font-weight: normal;			
+				padding-left: 15px;				
+				border-left: 3px solid red;
+                margin-left: 10px;
+                margin: 0;
+                padding-left: 10px;
+            }			
+           
+        }
+        .content{
+            display: flex;
+            .left{
+                flex: 1;
+                width: 50%;
+                a{
+                    display: block;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .border-right{
+				border-right: 1px solid darkgrey;
+			}
+            .right{
+                flex: 1;
+                width: 50%;
+                a{
+                    display: block;                
+                    img{
+                        width: 100%;
+                        height: 50%;
+                    }  
+                    &:first-child{
+						border-bottom: 1px solid darkgrey; 
+					}             
+                }   
+            }
+            .border-left{
+				border-left: 1px solid darkgrey;
+			}
+        }
+    }   
+}
+
+/* 底部区域的样式 */
+
+#footer{
+	position: fixed;
+	width: 100%;
+	background: #fff;
+	bottom: 0px;
+	z-index: 999;
+	max-width: 750px;
+
+	ul{
+		list-style: none;
+        display:flex;
+        padding: 0;
+        margin: 0;
+		li{
+			flex:1;
+			a{
+				display: block;
+				text-align: center;
+				img{
+					width: 65px;
+					height: 50px;
+
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
